@@ -26,7 +26,7 @@
 
 \ProcessOptions
 
-\RequirePackage[cp1251]{inputenc}
+\RequirePackage[utf8]{inputenc}
 %\RequirePackage[T2A]{fontenc}
 \RequirePackage{amssymb}
 \RequirePackage{amsmath}
@@ -165,7 +165,7 @@
                     {\typeAbstract\@abstract\par\vskip\vskipAfterTitle}%
                 \ruseng{{%
                 %--------- второй заголовок на английском для статей на русском
-                \English%
+                %\English%
                 \ifthenelse{\equal{\@title@eng}{}}{}%
                     {\typeTitle\@title@eng\ifthenelse{\equal{\@thanks@grant}{}}{}{\footnotemark\setcounter{footnote}{0}}\\[1ex]}%
                 \ifthenelse{\equal{\@author@long@eng}{}}{}%
@@ -353,7 +353,7 @@
     %\textit{\@author} \@title~//
     \Russian
     Машинное обучение и анализ данных, 2014. Т.\,1, \No\,8.\\
-    \English
+    %\English
     %Machine Learning and Data Analysis, 2014. Vol.\,1\,(8).
     }%
     %М.:~МАКС Пресс, 2009~---
@@ -1429,6 +1429,7 @@
 \renewcommand{\algorithmicuntil}{\algKeyword{\ruseng{пока}{until}}}
 %\renewcommand{\algorithmiccomment}[1]{{\footnotesize // #1}}
 \renewcommand{\algorithmiccomment}[1]{{\quad\sl // #1}}
+\newcommand*{\No}{\textnumero}
 
 % Мои дополнительные команды для описания алгоритмов
 \newcommand{\Procedure}[1]{{\tt #1}}
